@@ -6,6 +6,17 @@ export default {
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        hero: "url('/hero.png')",
+        play: "url('/play-bg.webp')",
+        faq: "url('/faq-bg.webp')",
+        faqwave: "url('/faqwave.png')",
+        gamedev: "url('/about.webp')",
+        btn: "linear-gradient(45deg, #91b61c 0%, #d5f066 51%, #91b61c 100%)",
+      },
+      boxShadow: {
+        btn: "0px 0px 14px -7px #d5f066",
+      },
       containers: {
         "2xs": "16rem",
         xs: "20rem",
@@ -21,8 +32,11 @@ export default {
         "7xl": "80rem",
       },
       colors: {
-        primary: "#167ac6", // Replace with your hex code
+        primary: "#167ac6",
         "primary-hover": "#156AAB",
+        pink: "#fc71e4",
+        blue: "#4198de",
+        green: "#30C520",
       },
       screens: {
         xs: "480px",
@@ -37,10 +51,15 @@ export default {
       },
       animation: {
         marquee: "marquee 30s linear infinite",
+        scroll: "scroll 30s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
         marquee: {
           "0%": {
             transform: "translateX(0)",

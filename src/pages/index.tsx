@@ -1,21 +1,22 @@
-import Achievements from "@/components/home/Achievements";
-import Determined from "@/components/home/Determined";
-// import Faq from "@/components/home/Faq";
-import Hero from "@/components/home/Hero";
-import Principal from "@/components/home/Principal";
-import ToppersSection from "@/components/home/ToppersSection";
-import UpcomingEvents from "@/components/home/UpcomingEvents";
+import { Hero } from "@/components/home/Hero";
+import Partners from "@/components/home/Partners";
+import GameDev from "@/components/home/GameDev";
+import GamingMode from "@/components/home/GamingMode";
+import MoveEarn from "@/components/home/MoveEarn";
+import Platform from "@/components/home/Platform";
+import Faq from "@/components/home/Faq";
 
 export default function HomePage() {
   return (
     <main className="w-full" id="top">
       <Hero />
-      <UpcomingEvents />
-      <Determined />
-      <Achievements />
-      <Principal />
-      <ToppersSection />
-      {/* <Faq /> */}
+      <Partners />
+      <GameDev />
+      <GamingMode />
+      <MoveEarn />
+      <Platform />
+      {/* <ToppersSection /> */}
+      <Faq />
     </main>
   );
 }

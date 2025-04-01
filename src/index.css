@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
-.allura-regular {
-  font-family: "Allura", serif;
+@import url("https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap");
+
+.stalinist {
+  font-family: "Stalinist One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  -webkit-text-stroke: 1px #525252;
 }
 
 @tailwind base;
@@ -19,6 +21,7 @@
     animation-play-state: paused;
   }
 }
+
 .scrollbar-x::-webkit-scrollbar {
   display: none;
 }

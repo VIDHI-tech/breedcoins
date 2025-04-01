@@ -25,7 +25,7 @@ export function ApplicationFooter({ children }: ApplicationLayoutProps) {
 
   console.log("navbarHeight", navbarHeight);
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-black">
       <div className="sticky top-0 z-50 bg-white shadow-md w-full">
         {/* <MaxWidthContainer> */}
         <Navbar refElement={navbarRef} />

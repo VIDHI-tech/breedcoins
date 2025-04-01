@@ -56,14 +56,9 @@ const Faq = () => {
   ];
 
   return (
-    <section className="flex flex-col lg:flex-row bg-primary gap-14 lg:gap-5 xl:gap-9 2xl:gap-28 px-4 py-8 sm:px-8 sm:p-16 xl:p-16">
-      <div className="text-white text-center lg:text-start">
-        <p className="text-3xl">FAQ's</p>
-        <h1 className="text-4xl xl:text-6xl leading-tight font-semibold ">
-          Frequently Asked Questions
-        </h1>
-      </div>
-      <div className="text-white w-full">
+    <section className="flex flex-col items-center bg-faq gap-14 lg:gap-5 xl:gap-9 2xl:gap-28 px-4 py-8 sm:px-8 sm:p-16 xl:p-16">
+      <h1 className="text-white text-center text-3xl font-bold">FAQ</h1>
+      <div className="text-green max-w-6xl">
         <Accordion type="single" collapsible>
           {items.map((item) => (
             <AccordionItem
@@ -73,15 +68,14 @@ const Faq = () => {
             >
               <AccordionTrigger
                 onClick={() => toggleSelection(item.key)}
-                className={`transition-colors duration-300 px-5 w-full hover:no-underline rounded-t-2xl text-start ${
-                  selectedKey === item.key ? "bg-white" : "pb-16"
+                className={`transition-colors duration-300 px-5 my-2 w-full hover:no-underline rounded-t-2xl text-start ${
+                  selectedKey === item.key ? " bg-black " : ""
                 }`}
               >
                 <p
                   className={cn(" w-full", {
-                    "text-black font-bold text-xl xl:text-2xl":
-                      selectedKey === item.key,
-                    "text-white text-xl xl:text-2xl": selectedKey !== item.key,
+                    " font-bold text-xl xl:text-2xl": selectedKey === item.key,
+                    "text-xl xl:text-2xl": selectedKey !== item.key,
                   })}
                 >
                   {item.title}
@@ -89,8 +83,8 @@ const Faq = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div
-                  className={`md:text-lg xl:text-xl px-5 pb-7 rounded-b-2xl ${
-                    selectedKey === item.key ? "text-gray-500 bg-white" : ""
+                  className={`md:text-lg xl:text-xl px-5 py-7 rounded-b-2xl ${
+                    selectedKey === item.key ? "bg-black text-white " : ""
                   }`}
                 >
                   {item.defaultContent}
